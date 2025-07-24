@@ -2,12 +2,39 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { Star, Shield, Truck, RotateCcw, Award, Users, Clock, MapPin } from "lucide-react";
+import { Star, Shield, Truck, RotateCcw, Award, Users, Clock, MapPin, Play, Pause } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 import heroImage from "@/assets/hero-bedroom.jpg";
+// Video will be added when available - using placeholder for now
 import familySleep from "@/assets/family-sleep.jpg";
 import mattressShowcase from "@/assets/mattress-showcase.jpg";
 
 const Home = () => {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(true);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+    
+    const handleChange = () => setPrefersReducedMotion(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleChange);
+    
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  const toggleVideo = () => {
+    if (videoRef.current) {
+      if (isVideoPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsVideoPlaying(!isVideoPlaying);
+    }
+  };
+
   const features = [
     {
       icon: <Shield className="h-8 w-8 text-primary" />,
@@ -67,6 +94,7 @@ const Home = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
+        {/* Video functionality ready - add video file to src/assets/hero-video.mp4 when available */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30" />
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,6 +116,7 @@ const Home = () => {
               </Button>
             </Link>
             <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
+              <Play className="mr-2 h-4 w-4" />
               Watch Our Story
             </Button>
           </div>
