@@ -140,10 +140,14 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              Why Choose SleepWell?
+              Why Choose Dr. Back?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Quality sleep, affordable prices, and trusted service across India
+              Your spine deserves better. Whether you're buying your first
+              orthopedic mattress or replacing an old one, it’s one of the most
+              important investments in your long-term health. A well-designed
+              mattress supports your spine’s natural “double S” curve — helping
+              reduce back pain, muscle strain, and restless sleep.{" "}
             </p>
           </div>
 
@@ -236,7 +240,7 @@ const Home = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
+            <div className="relative">
               <img
                 src={mattressShowcase}
                 alt="Premium mattress collection"
@@ -279,14 +283,12 @@ const Home = () => {
                 </Button>
               </Link>
             </div>
-    
           </div>
         </div>
       </section>
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-   
             <div>
               <h2 className="text-4xl font-bold mb-6">
                 Sleep Without Disturbance – Thanks to Motion Isolation
@@ -333,7 +335,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
 
       {/* Testimonials */}
       {/* <section className="py-20 bg-gradient-to-b from-secondary/30 to-background">
