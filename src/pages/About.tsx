@@ -195,7 +195,7 @@ const About = () => {
       </section>
 
       {/* Company Story Timeline */}
-      <section className="py-20 bg-gradient-to-b from-secondary/30 to-background">
+      {/* <section className="py-20 bg-gradient-to-b from-secondary/30 to-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Journey</h2>
@@ -220,10 +220,10 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Meet Our Team</h2>
@@ -245,10 +245,10 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Achievements */}
-      <section className="py-16 bg-accent text-accent-foreground">
+      {/* <section className="py-16 bg-accent text-accent-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {achievements.map((achievement, index) => (
@@ -260,7 +260,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
       <section className="py-20">
@@ -310,7 +310,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-primary-foreground">
+      {/* <section className="py-20 bg-gradient-to-r from-primary to-accent text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Experience Better Sleep?
@@ -331,7 +331,7 @@ const About = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

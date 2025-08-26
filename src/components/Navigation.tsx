@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Mail } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,11 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-2xl font-bold text-primary">
-              SleepWell
+              <img
+                src={logo}
+                alt="Premium mattress collection"
+                className="max-h-12 w-auto object-contain rounded-lg shadow-card hover:shadow-hover transition-shadow duration-300 bg-transparent"
+              />
             </Link>
           </div>
 
@@ -51,7 +56,7 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="h-4 w-4" />
-              <span>+91 98765 43210</span>
+              <span>+91 89503 53673</span>
             </div>
             <Button variant="accent" size="sm">
               Get Quote
@@ -82,11 +87,11 @@ const Navigation = () => {
                       {item.name}
                     </Link>
                   ))}
-                  
+
                   <div className="pt-4 border-t border-border">
                     <div className="flex items-center space-x-2 px-4 py-2 text-muted-foreground">
                       <Phone className="h-4 w-4" />
-                      <span>+91 98765 43210</span>
+                      <span>+91 89503 53673</span>
                     </div>
                     <div className="flex items-center space-x-2 px-4 py-2 text-muted-foreground">
                       <Mail className="h-4 w-4" />

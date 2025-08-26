@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-accent-light">SleepWell</h3>
+            <h3 className="text-2xl font-bold text-accent-light">Dr.Back</h3>
             <p className="text-accent-foreground/80 leading-relaxed">
               India's trusted mattress brand committed to providing quality sleep solutions 
               for every home across the nation.
@@ -32,24 +32,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Products */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-accent-light">Products</h4>
-            <ul className="space-y-2">
-              <li><span className="hover:text-accent-light cursor-pointer transition-colors">Memory Foam</span></li>
-              <li><span className="hover:text-accent-light cursor-pointer transition-colors">Spring Mattress</span></li>
-              <li><span className="hover:text-accent-light cursor-pointer transition-colors">Orthopedic</span></li>
-              <li><span className="hover:text-accent-light cursor-pointer transition-colors">Luxury Collection</span></li>
-            </ul>
-          </div>
-
+    
           {/* Contact Info */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-accent-light">Contact Us</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-accent-light" />
-                <span>+91 98765 43210</span>
+                <span>+91 89503 53673</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-accent-light" />
@@ -65,7 +55,7 @@ const Footer = () => {
 
         <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center">
           <p className="text-accent-foreground/80">
-            © 2024 SleepWell. All rights reserved. | Made with ❤️ in India
+            © 2025 Dr. Back. All rights reserved
           </p>
         </div>
       </div>
