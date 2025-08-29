@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Mail } from "lucide-react";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +28,7 @@ const Navigation = () => {
               <img
                 src={logo}
                 alt="Premium mattress collection"
-                className="max-h-12 w-auto object-contain rounded-lg shadow-card hover:shadow-hover transition-shadow duration-300 bg-transparent"
+                className="max-h-28 w-auto object-contain rounded-lg shadow-card hover:shadow-hover transition-shadow duration-300 bg-transparent"
               />
             </Link>
           </div>

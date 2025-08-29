@@ -2,93 +2,131 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { Award, Users, Heart, Shield, Truck, Star, Target, Eye, CheckCircle } from "lucide-react";
+import {
+  Award,
+  Users,
+  Heart,
+  Shield,
+  Truck,
+  Star,
+  Target,
+  Eye,
+  CheckCircle,
+} from "lucide-react";
 import familySleep from "@/assets/family-sleep.jpg";
-import mattressShowcase from "@/assets/mattress-showcase.jpg";
+import mattressShowcase from "@/assets/mattress-showcase.jpeg";
 
 const About = () => {
   const values = [
     {
       icon: <Heart className="h-8 w-8 text-primary" />,
       title: "Customer First",
-      description: "Every decision we make is centered around our customers' comfort and satisfaction."
+      description: `Every decision we make begins with one question: Will this improve our customers’ comfort and satisfaction? Your sleep is at the heart of everything we do`,
     },
     {
       icon: <Shield className="h-8 w-8 text-primary" />,
       title: "Quality Assurance",
-      description: "We maintain the highest standards in materials, manufacturing, and testing."
+      description:
+        "We uphold the highest standards in materials, craftsmanship, and testing, ensuring every Dr. Back mattress delivers lasting comfort and reliability.",
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
       title: "Indian Heritage",
-      description: "Proudly made in India, designed specifically for Indian homes and families."
+      description:
+        " Proudly made in India, our mattresses are designed with a deep understanding of Indian families, homes, and sleeping habits.",
     },
     {
       icon: <Award className="h-8 w-8 text-primary" />,
       title: "Innovation",
-      description: "Continuously improving our products with the latest sleep technology and research."
-    }
+      description:
+        "We continuously evolve, blending modern sleep science with advanced technology to create mattresses that set new benchmarks in comfort and support.",
+    },
   ];
 
   const milestones = [
     {
       year: "2009",
       title: "Foundation",
-      description: "SleepWell was founded with a vision to make quality sleep accessible to every Indian family."
+      description:
+        "SleepWell was founded with a vision to make quality sleep accessible to every Indian family.",
     },
     {
       year: "2012",
       title: "First Factory",
-      description: "Established our first manufacturing facility in Mumbai with state-of-the-art equipment."
+      description:
+        "Established our first manufacturing facility in Mumbai with state-of-the-art equipment.",
     },
     {
       year: "2015",
       title: "National Expansion",
-      description: "Expanded operations to serve customers across 100+ cities in India."
+      description:
+        "Expanded operations to serve customers across 100+ cities in India.",
     },
     {
       year: "2018",
       title: "50,000 Customers",
-      description: "Reached the milestone of 50,000 satisfied customers across India."
+      description:
+        "Reached the milestone of 50,000 satisfied customers across India.",
     },
     {
       year: "2020",
       title: "Online Launch",
-      description: "Launched our online platform making premium mattresses accessible nationwide."
+      description:
+        "Launched our online platform making premium mattresses accessible nationwide.",
     },
     {
       year: "2024",
       title: "Industry Leader",
-      description: "Recognized as one of India's leading mattress brands with 200+ cities served."
-    }
+      description:
+        "Recognized as one of India's leading mattress brands with 200+ cities served.",
+    },
   ];
 
   const teamMembers = [
     {
       name: "Rajesh Agarwal",
       position: "Founder & CEO",
-      description: "25+ years experience in sleep industry, passionate about improving Indian sleep quality.",
-      image: "👨‍💼"
+      description:
+        "25+ years experience in sleep industry, passionate about improving Indian sleep quality.",
+      image: "👨‍💼",
     },
     {
       name: "Dr. Priya Sharma",
       position: "Head of R&D",
-      description: "Sleep scientist with expertise in ergonomics and orthopedic support systems.",
-      image: "👩‍🔬"
+      description:
+        "Sleep scientist with expertise in ergonomics and orthopedic support systems.",
+      image: "👩‍🔬",
     },
     {
       name: "Amit Kumar",
       position: "Manufacturing Director",
-      description: "Ensures quality control and sustainable manufacturing practices across all facilities.",
-      image: "👨‍🏭"
-    }
+      description:
+        "Ensures quality control and sustainable manufacturing practices across all facilities.",
+      image: "👨‍🏭",
+    },
   ];
 
   const achievements = [
-    { icon: <Users className="h-6 w-6" />, stat: "50,000+", label: "Happy Customers" },
-    { icon: <Award className="h-6 w-6" />, stat: "15", label: "Years Experience" },
-    { icon: <Truck className="h-6 w-6" />, stat: "200+", label: "Cities Served" },
-    { icon: <Star className="h-6 w-6" />, stat: "4.8", label: "Average Rating" }
+    {
+      icon: <Users className="h-6 w-6" />,
+      stat: "50,000+",
+      label: "Happy Customers",
+    },
+    {
+      icon: <Award className="h-6 w-6" />,
+      stat: "15",
+      label: "Years Experience",
+    },
+    {
+      icon: <Truck className="h-6 w-6" />,
+      stat: "200+",
+      label: "Cities Served",
+    },
+    {
+      icon: <Star className="h-6 w-6" />,
+      stat: "4.8",
+      label: "Average Rating",
+    },
   ];
 
   return (
@@ -99,15 +137,18 @@ const About = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-6 bg-accent text-accent-foreground">About SleepWell</Badge>
+              <Badge className="mb-6 bg-accent text-accent-foreground">
+                About Dr.Back Mattresses
+              </Badge>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
                 Transforming Sleep
                 <span className="text-primary block">Across India</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                For over 15 years, SleepWell has been India's trusted mattress brand, 
-                committed to providing quality sleep solutions that enhance the lives 
-                of families across the nation.
+                For over 35 years, Dr. Back has been a trusted name in sleep
+                solutions across India. Our journey began with a simple vision:
+                to create mattresses that not only provide comfort but also
+                support healthy, restful sleep.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/products">
@@ -123,9 +164,9 @@ const About = () => {
               </div>
             </div>
             <div className="relative">
-              <img 
-                src={familySleep} 
-                alt="Happy family sleeping" 
+              <img
+                src={familySleep}
+                alt="Happy family sleeping"
                 className="rounded-lg shadow-card hover:shadow-hover transition-shadow duration-300"
               />
             </div>
@@ -145,9 +186,10 @@ const About = () => {
                   <h2 className="text-3xl font-bold">Our Mission</h2>
                 </div>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  To make quality sleep accessible and affordable for every Indian family by 
-                  creating innovative, comfortable, and durable mattresses that enhance 
-                  health and well-being.
+                  To make quality sleep accessible and affordable for every
+                  Indian family by designing innovative, comfortable, and
+                  durable mattresses that support health, well-being, and a
+                  better lifestyle.
                 </p>
               </CardContent>
             </Card>
@@ -160,9 +202,9 @@ const About = () => {
                   <h2 className="text-3xl font-bold">Our Vision</h2>
                 </div>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  To become India's most trusted sleep brand, revolutionizing the way 
-                  Indians sleep by providing world-class mattresses that combine 
-                  traditional comfort with modern technology.
+                  To be India’s most trusted sleep brand, transforming the way
+                  the nation rests by delivering world-class mattresses that
+                  blend traditional comfort with modern technology.
                 </p>
               </CardContent>
             </Card>
@@ -174,19 +216,24 @@ const About = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Values</h2>
+            <h2 className="text-4xl font-bold mb-4">Our Core Values</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The principles that guide everything we do at SleepWell
+              The principles that guide everything we do at Dr.Back
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-hover transition-all duration-300 hover:scale-105">
+              <Card
+                key={index}
+                className="text-center p-6 hover:shadow-hover transition-all duration-300 hover:scale-105"
+              >
                 <CardContent className="pt-6">
                   <div className="mb-4 flex justify-center">{value.icon}</div>
                   <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {value.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -267,20 +314,25 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">Why Choose SleepWell?</h2>
+              <h2 className="text-4xl font-bold mb-6">Why Choose Dr. Back?</h2>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                When you choose SleepWell, you're choosing a brand that understands 
-                the unique needs of Indian families and delivers exceptional value.
+                Therapeutic Support Meets Daily Comfort
               </p>
-              
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                At Dr. Back, we go beyond ordinary mattresses. Our designs
+                combine medical-grade back support with plush comfort to ensure
+                healthy, restful sleep — especially for those dealing with slip
+                disc, spondylitis, or chronic back pain.
+              </p>
+
               <div className="space-y-4">
                 {[
-                  "15+ years of expertise in sleep solutions",
-                  "Made in India with premium international standards",
-                  "Comprehensive warranty and customer support",
-                  "Affordable pricing without compromising quality",
-                  "Extensive research and development",
-                  "Trusted by 50,000+ satisfied customers"
+                  "Spine-aligned orthopedic design for proper posture",
+                  "Motion isolation so you sleep undisturbed",
+                  "Luxurious feel with breathable, premium fabrics",
+                  "Doctor-recommended support trusted by health experts",
+                  "35+ years of expertise in sleep solutions for Indian families",
+                  "Trusted by over 5 Million happy sleepers across India",
                 ].map((point, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-success flex-shrink-0" />
@@ -289,19 +341,19 @@ const About = () => {
                 ))}
               </div>
 
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <Link to="/products">
                   <Button variant="default" size="lg">
                     Experience SleepWell
                   </Button>
                 </Link>
-              </div>
+              </div> */}
             </div>
-            
+
             <div className="relative">
-              <img 
-                src={mattressShowcase} 
-                alt="SleepWell mattress collection" 
+              <img
+                src={mattressShowcase}
+                alt="Dr.Back mattress collection"
                 className="rounded-lg shadow-card hover:shadow-hover transition-shadow duration-300"
               />
             </div>
