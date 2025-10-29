@@ -2,11 +2,18 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Star, Filter, Grid, List } from "lucide-react";
 import mattressProduct1 from "@/assets/mattress-product-1.jpg";
 import mattressProduct2 from "@/assets/mattress-product-2.jpg";
 import mattressProduct3 from "@/assets/mattress-product-3.jpg";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
@@ -17,26 +24,26 @@ const Products = () => {
   const products = [
     {
       id: 1,
-      name: "SleepWell Memory Foam Deluxe",
+      name: "Orthopedic Duet Mattress",
       type: "Memory Foam",
       image: mattressProduct1,
       rating: 4.8,
       reviews: 234,
-      price: 25999,
       originalPrice: 32999,
       sizes: ["Single", "Double", "Queen", "King"],
       features: [
-        "Premium memory foam construction",
-        "Temperature regulating technology",
-        "Motion isolation for couples",
-        "10-year warranty"
+        "Soft-touch quilted fabric",
+        "Firm spine support",
+        "Durable foam layers",
+        "Balanced comfort & support",
       ],
-      comfort: "Medium-Firm",
-      thickness: "8 inches"
+      comfort: "Medium",
+      thickness: "125mm – 200mm",
+      warranty: "7 Years",
     },
     {
       id: 2,
-      name: "SleepWell Orthopedic Pro",
+      name: "Orthopedic + Memory Foam Duet Impress Mattress",
       type: "Orthopedic",
       image: mattressProduct2,
       rating: 4.7,
@@ -45,17 +52,19 @@ const Products = () => {
       originalPrice: 35999,
       sizes: ["Single", "Double", "Queen", "King"],
       features: [
-        "Orthopedic support system",
+        "Premium quilted fabric",
+        "Pressure-relieving memory foam",
+        "Strong supportive base",
         "Spine alignment technology",
-        "Pressure point relief",
-        "Anti-bacterial treatment"
+        "Support with extra comfort",
       ],
-      comfort: "Firm",
-      thickness: "10 inches"
+      comfort: "Soft",
+      thickness: "125mm – 200mm",
+      warranty: "7 Years",
     },
     {
       id: 3,
-      name: "SleepWell Luxury Spring",
+      name: "Luxury Orthopedic Duet Luxury Mattress",
       type: "Spring",
       image: mattressProduct3,
       rating: 4.9,
@@ -64,17 +73,19 @@ const Products = () => {
       originalPrice: 44999,
       sizes: ["Double", "Queen", "King"],
       features: [
-        "Premium pocket springs",
-        "Luxury quilted top",
-        "Edge support technology",
-        "15-year warranty"
+        "Premium breathable fabric",
+        "Natural latex comfort layer",
+        "Long-lasting core",
+        "Firm orthopedic support",
+        "Premium sleep experience",
       ],
       comfort: "Medium",
-      thickness: "12 inches"
+      thickness: "125mm – 200mm",
+      warranty: "10 Years",
     },
     {
       id: 4,
-      name: "SleepWell Eco Natural",
+      name: "Durabond Mattress",
       type: "Natural",
       image: mattressProduct1,
       rating: 4.6,
@@ -83,17 +94,18 @@ const Products = () => {
       originalPrice: 28999,
       sizes: ["Single", "Double", "Queen"],
       features: [
-        "100% natural materials",
-        "Organic cotton cover",
-        "Latex foam comfort",
-        "Eco-friendly construction"
+        "Cotton jacquard quilted fabric",
+        "Rebonded foam for firm support",
+        "PU foam comfort layer",
+        "Reliable everyday back care",
       ],
-      comfort: "Medium-Soft",
-      thickness: "8 inches"
+      comfort: "Firm",
+      thickness: "100mm – 150mm",
+      warranty: "5 Years",
     },
     {
       id: 5,
-      name: "SleepWell Cool Gel",
+      name: "Durabond+ Mattress",
       type: "Memory Foam",
       image: mattressProduct2,
       rating: 4.8,
@@ -102,17 +114,18 @@ const Products = () => {
       originalPrice: 39999,
       sizes: ["Double", "Queen", "King"],
       features: [
-        "Cooling gel infusion",
-        "Temperature regulation",
-        "Memory foam comfort",
-        "Moisture-wicking cover"
+        "Premium quilted fabric finish",
+        "HR foam + rebonded foam core",
+        "Extra durability and comfort",
+        "Orthopedic spine alignment",
       ],
       comfort: "Medium",
-      thickness: "10 inches"
+      thickness: "125mm – 150mm",
+      warranty: "6 Years",
     },
     {
       id: 6,
-      name: "SleepWell Budget Comfort",
+      name: "Durabond Deluxe Mattress",
       type: "Foam",
       image: mattressProduct3,
       rating: 4.4,
@@ -121,33 +134,160 @@ const Products = () => {
       originalPrice: 19999,
       sizes: ["Single", "Double", "Queen"],
       features: [
-        "High-density foam",
-        "Affordable comfort",
-        "Durable construction",
-        "5-year warranty"
+        "Cotton jacquard fabric with plush pillow top",
+        "HR foam + rebonded foam support",
+        "PU foam comfort layer",
+        "Added cushioning for a luxury feel",
       ],
-      comfort: "Medium-Firm",
-      thickness: "6 inches"
-    }
+      comfort: "Medium",
+      thickness: "100mm – 150mm",
+      warranty: "5 Years",
+    },
+    {
+      id: 7,
+      name: "Latexpuf Silver Mattress",
+      type: "Foam",
+      image: mattressProduct3,
+      rating: 4.4,
+      reviews: 89,
+      price: 15999,
+      originalPrice: 19999,
+      sizes: ["Single", "Double", "Queen"],
+      features: [
+        "Cotton jacquard quilted fabric",
+        "PU foam + rebonded foam core",
+        "Balanced comfort & back care",
+        "Reliable everyday support",
+      ],
+      comfort: "Medium",
+      thickness: "100mm – 150mm",
+      warranty: "5 Years",
+    },
+    {
+      id: 8,
+      name: "Latexpuf Gold Mattress",
+      type: "Foam",
+      image: mattressProduct3,
+      rating: 4.4,
+      reviews: 89,
+      price: 15999,
+      originalPrice: 19999,
+      sizes: ["Single", "Double", "Queen"],
+      features: [
+        "Premium quilted fabric",
+        "HR foam + rebonded foam support",
+        "Extra durability & comfort",
+        "Long-lasting spine alignment",
+      ],
+      comfort: "Medium",
+      thickness: "100mm – 150mm",
+      warranty: "10 Years",
+    },
+    {
+      id: 9,
+      name: "Bonnell Spring Mattress",
+      type: "Foam",
+      image: mattressProduct3,
+      rating: 4.4,
+      reviews: 89,
+      price: 15999,
+      originalPrice: 19999,
+      sizes: ["Single", "Double", "Queen"],
+      features: [
+        "High GSM jacquard fabric",
+        "HD PU foam quilt",
+        "HR foam layer",
+        "Rubberized coir",
+        "Bonnell spring core",
+        "Durable support & balanced comfort",
+      ],
+      comfort: "Medium",
+      thickness: "150mm – 250mm",
+      warranty: "5 Years",
+    },
+    {
+      id: 10,
+      name: "Bonnell Impress Mattress",
+      type: "Foam",
+      image: mattressProduct3,
+      rating: 4.4,
+      reviews: 89,
+      price: 15999,
+      originalPrice: 19999,
+      sizes: ["Single", "Double", "Queen"],
+      features: [
+        "High GSM knitted fabric",
+        "Thermo memory quilt",
+        "HD memory foam",
+        "HR foam + rubberized coir",
+        "Bonnell spring system",
+        "Plush feel with lasting back care",
+      ],
+      comfort: "Soft",
+      thickness: "200mm – 300mm",
+      warranty: "5 Years",
+    },
+    {
+      id: 11,
+      name: "Pocket Spring Mattress",
+      type: "Foam",
+      image: mattressProduct3,
+      rating: 4.4,
+      reviews: 89,
+      price: 15999,
+      originalPrice: 19999,
+      sizes: ["Single", "Double", "Queen"],
+      features: [
+        "High GSM jacquard fabric",
+        "HD PU foam quilt",
+        "HR foam layer",
+        "Turkish felt",
+        "Pocket spring core",
+        "Balanced support with gentle bounce",
+      ],
+      comfort: "Medium",
+      thickness: "150mm – 250mm",
+      warranty: "5 Years",
+    },
+    {
+      id: 12,
+      name: "Pocket Spring Mattress",
+      type: "Foam",
+      image: mattressProduct3,
+      rating: 4.4,
+      reviews: 89,
+      price: 15999,
+      originalPrice: 19999,
+      sizes: ["Single", "Double", "Queen"],
+      features: [
+        "High GSM knitted fabric",
+        "Thermo memory quilt",
+        "HD memory foam",
+        "HR foam + Turkish felt",
+        "Pocket spring system",
+        "Plush comfort with body-contouring support",
+      ],
+      comfort: "Soft",
+      thickness: "200mm – 300mm",
+      warranty: "5 Years",
+    },
   ];
 
-  const filteredProducts = products.filter(product => {
+  const filteredProducts = products.filter((product) => {
     if (filterType !== "all" && product.type !== filterType) return false;
     return true;
   });
 
-  const ProductCard = ({ product }: { product: typeof products[0] }) => (
+  const ProductCard = ({ product }: { product: (typeof products)[0] }) => (
     <Card className="group hover:shadow-hover transition-all duration-300 hover:scale-102">
       <CardHeader className="p-0">
         <div className="relative overflow-hidden rounded-t-lg">
-          <img 
-            src={product.image} 
+          <img
+            src={product.image}
             alt={product.name}
             className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
           />
-          <Badge className="absolute top-3 left-3 bg-accent text-accent-foreground">
-            {Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}% OFF
-          </Badge>
+
           <div className="absolute top-3 right-3 flex items-center space-x-1 bg-white/90 px-2 py-1 rounded">
             <Star className="h-4 w-4 text-accent-light fill-current" />
             <span className="text-sm font-medium">{product.rating}</span>
@@ -155,20 +295,28 @@ const Products = () => {
         </div>
       </CardHeader>
       <CardContent className="p-6">
-        <div className="mb-2">
-          <Badge variant="outline" className="text-xs">{product.type}</Badge>
-        </div>
-        <CardTitle className="text-lg mb-2 line-clamp-2">{product.name}</CardTitle>
-        
+        {/* <div className="mb-2">
+          <Badge variant="outline" className="text-xs">Comfort: {product.type}</Badge>
+        </div> */}
+        <CardTitle className="text-lg mb-2 line-clamp-2">
+          {product.name}
+        </CardTitle>
+
         <div className="space-y-3 mb-4">
           <div className="flex items-center justify-between text-sm text-muted-foreground">
             <span>Comfort: {product.comfort}</span>
             <span>Thickness: {product.thickness}</span>
           </div>
-          
+          <span className="text-sm text-muted-foreground">
+            Warranty: {product.warranty}
+          </span>
+
           <ul className="space-y-1">
-            {product.features.slice(0, 3).map((feature, index) => (
-              <li key={index} className="text-sm text-muted-foreground flex items-center">
+            {product.features.map((feature, index) => (
+              <li
+                key={index}
+                className="text-sm text-muted-foreground flex items-center"
+              >
                 <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0"></div>
                 {feature}
               </li>
@@ -176,30 +324,42 @@ const Products = () => {
           </ul>
         </div>
 
-        <div className="flex items-center space-x-2 mb-4">
-          <span className="text-2xl font-bold text-primary">₹{product.price.toLocaleString()}</span>
-          <span className="text-lg text-muted-foreground line-through">₹{product.originalPrice.toLocaleString()}</span>
-        </div>
+        {/* <div className="flex items-center space-x-2 mb-4">
+          <span className="text-2xl font-bold text-primary">
+            ₹{product.price.toLocaleString()}
+          </span>
+          <span className="text-lg text-muted-foreground line-through">
+            ₹{product.originalPrice.toLocaleString()}
+          </span>
+        </div> */}
 
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-1">
             {[...Array(5)].map((_, i) => (
-              <Star 
-                key={i} 
-                className={`h-4 w-4 ${i < Math.floor(product.rating) ? 'text-accent-light fill-current' : 'text-gray-300'}`} 
+              <Star
+                key={i}
+                className={`h-4 w-4 ${
+                  i < Math.floor(product.rating)
+                    ? "text-accent-light fill-current"
+                    : "text-gray-300"
+                }`}
               />
             ))}
-            <span className="text-sm text-muted-foreground ml-1">({product.reviews})</span>
+            <span className="text-sm text-muted-foreground ml-1">
+              ({product.reviews})
+            </span>
           </div>
         </div>
 
         <div className="space-y-2">
-          <Button className="w-full" variant="default">
+          {/* <Button className="w-full" variant="default">
             View Details
-          </Button>
-          <Button className="w-full" variant="outline">
-            Enquire Now
-          </Button>
+          </Button> */}
+          <Link to="/contact">
+            <Button variant="hero" size="lg">
+              Enquire Now
+            </Button>
+          </Link>
         </div>
       </CardContent>
     </Card>
@@ -211,16 +371,19 @@ const Products = () => {
       <section className="bg-gradient-to-r from-primary to-accent text-primary-foreground py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Mattress Collection</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Our Mattress Collection
+            </h1>
             <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
-              Discover the perfect mattress for your comfort needs. Premium quality, affordable prices, made in India.
+              Discover the perfect mattress for your comfort needs. Premium
+              quality, affordable prices, made in India.
             </p>
           </div>
         </div>
       </section>
 
       {/* Filters and Controls */}
-      <section className="py-8 border-b border-border">
+      {/* <section className="py-8 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
             <div className="flex flex-wrap items-center gap-4">
@@ -291,7 +454,7 @@ const Products = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Products Grid */}
       <section className="py-12">
@@ -303,11 +466,11 @@ const Products = () => {
           </div>
 
           {/* Load More / Pagination */}
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <Button variant="outline" size="lg">
               Load More Products
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -316,15 +479,23 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-2xl font-bold text-primary">100 Night Trial</div>
-              <p className="text-muted-foreground">Try risk-free for 100 nights</p>
+              <div className="text-2xl font-bold text-primary">
+                100 Night Trial
+              </div>
+              <p className="text-muted-foreground">
+                Try risk-free for 100 nights
+              </p>
             </div>
             <div className="space-y-2">
-              <div className="text-2xl font-bold text-primary">Free Delivery</div>
+              <div className="text-2xl font-bold text-primary">
+                Free Delivery
+              </div>
               <p className="text-muted-foreground">Across India in 3-7 days</p>
             </div>
             <div className="space-y-2">
-              <div className="text-2xl font-bold text-primary">10 Year Warranty</div>
+              <div className="text-2xl font-bold text-primary">
+                10 Year Warranty
+              </div>
               <p className="text-muted-foreground">Comprehensive coverage</p>
             </div>
           </div>
