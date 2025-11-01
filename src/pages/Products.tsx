@@ -9,6 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Star, Filter, Grid, List } from "lucide-react";
 import mattressProduct1 from "@/assets/mattress-product-1.jpg";
 import mattressProduct2 from "@/assets/mattress-product-2.jpg";
@@ -21,7 +22,7 @@ const Products = () => {
   const [filterType, setFilterType] = useState("all");
   const [filterSize, setFilterSize] = useState("all");
 
-  const products = [
+  const mattresses = [
     {
       id: 1,
       name: "Orthopedic Duet Mattress",
@@ -273,12 +274,140 @@ const Products = () => {
     },
   ];
 
-  const filteredProducts = products.filter((product) => {
+  const pillows = [
+    {
+      id: 1,
+      name: "Memory Foam Pillow",
+      type: "Memory Foam",
+      image: mattressProduct1,
+      rating: 4.7,
+      reviews: 156,
+      price: 1999,
+      originalPrice: 2999,
+      sizes: ["Standard", "Queen", "King"],
+      features: [
+        "Contoured memory foam design",
+        "Neck and spine alignment",
+        "Breathable cooling cover",
+        "Hypoallergenic materials",
+      ],
+      comfort: "Medium",
+      thickness: "4-6 inches",
+      warranty: "3 Years",
+    },
+    {
+      id: 2,
+      name: "Orthopedic Cervical Pillow",
+      type: "Orthopedic",
+      image: mattressProduct2,
+      rating: 4.8,
+      reviews: 203,
+      price: 2499,
+      originalPrice: 3499,
+      sizes: ["Standard", "Large"],
+      features: [
+        "Ergonomic cervical support",
+        "Reduces neck pain",
+        "Premium quilted cover",
+        "Doctor recommended design",
+      ],
+      comfort: "Firm",
+      thickness: "4-5 inches",
+      warranty: "5 Years",
+    },
+    {
+      id: 3,
+      name: "Luxury Down Alternative Pillow",
+      type: "Fiber Fill",
+      image: mattressProduct3,
+      rating: 4.6,
+      reviews: 189,
+      price: 1499,
+      originalPrice: 2199,
+      sizes: ["Standard", "Queen", "King"],
+      features: [
+        "Soft microfiber fill",
+        "Hotel-quality comfort",
+        "Machine washable",
+        "Plush and fluffy feel",
+      ],
+      comfort: "Soft",
+      thickness: "5-7 inches",
+      warranty: "2 Years",
+    },
+    {
+      id: 4,
+      name: "Cooling Gel Pillow",
+      type: "Gel",
+      image: mattressProduct1,
+      rating: 4.7,
+      reviews: 167,
+      price: 2799,
+      originalPrice: 3799,
+      sizes: ["Standard", "Queen"],
+      features: [
+        "Cooling gel infusion",
+        "Temperature regulation",
+        "Memory foam base",
+        "Stays cool all night",
+      ],
+      comfort: "Medium",
+      thickness: "5-6 inches",
+      warranty: "3 Years",
+    },
+    {
+      id: 5,
+      name: "Bamboo Pillow",
+      type: "Natural",
+      image: mattressProduct2,
+      rating: 4.5,
+      reviews: 134,
+      price: 1799,
+      originalPrice: 2499,
+      sizes: ["Standard", "Queen"],
+      features: [
+        "Eco-friendly bamboo cover",
+        "Breathable and soft",
+        "Shredded memory foam fill",
+        "Adjustable loft",
+      ],
+      comfort: "Medium",
+      thickness: "5-6 inches",
+      warranty: "3 Years",
+    },
+    {
+      id: 6,
+      name: "Latex Foam Pillow",
+      type: "Latex",
+      image: mattressProduct3,
+      rating: 4.8,
+      reviews: 178,
+      price: 3299,
+      originalPrice: 4299,
+      sizes: ["Standard", "King"],
+      features: [
+        "Natural latex foam",
+        "Durable and supportive",
+        "Antimicrobial properties",
+        "Excellent breathability",
+      ],
+      comfort: "Firm",
+      thickness: "5-6 inches",
+      warranty: "5 Years",
+    },
+  ];
+
+  const filteredMattresses = mattresses.filter((product) => {
     if (filterType !== "all" && product.type !== filterType) return false;
     return true;
   });
 
-  const ProductCard = ({ product }: { product: (typeof products)[0] }) => (
+  const filteredPillows = pillows.filter((product) => {
+    if (filterType !== "all" && product.type !== filterType) return false;
+    return true;
+  });
+
+  const ProductCard = ({ product }: { product: (typeof mattresses)[0] }) => (
     <Card className="group hover:shadow-hover transition-all duration-300 hover:scale-102">
       <CardHeader className="p-0">
         <div className="relative overflow-hidden rounded-t-lg">
@@ -372,10 +501,10 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Our Mattress Collection
+              Our Products Collection
             </h1>
             <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
-              Discover the perfect mattress for your comfort needs. Premium
+              Discover the perfect mattress and pillow for your comfort needs. Premium
               quality, affordable prices, made in India.
             </p>
           </div>
@@ -456,21 +585,31 @@ const Products = () => {
         </div>
       </section> */}
 
-      {/* Products Grid */}
+      {/* Products Tabs */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-
-          {/* Load More / Pagination */}
-          {/* <div className="text-center mt-12">
-            <Button variant="outline" size="lg">
-              Load More Products
-            </Button>
-          </div> */}
+          <Tabs defaultValue="mattresses" className="w-full">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
+              <TabsTrigger value="mattresses">Mattresses</TabsTrigger>
+              <TabsTrigger value="pillows">Pillows</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="mattresses">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredMattresses.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="pillows">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredPillows.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
