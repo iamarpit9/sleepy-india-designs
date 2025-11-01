@@ -230,6 +230,7 @@ const Contact = () => {
             </Card> */}
 
             {/* Map and Store Info */}
+
             <div className="space-y-6">
               <Card className="p-6">
                 <CardHeader>
@@ -241,13 +242,12 @@ const Contact = () => {
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold mb-2">
-                        SleepWell Experience Center
-                      </h4>
+                      <h4 className="font-semibold mb-2">Batra Foam Traders</h4>
                       <p className="text-muted-foreground">
-                        123 Sleep Street, Comfort Colony
+                        Batra Foam Traders, Mandir Rd, Near Nanda Plywood, Geeta
+                        Colony
                         <br />
-                        Mumbai, Maharashtra 400001
+                        Panipat, Haryana 132103
                         <br />
                         India
                       </p>
@@ -258,34 +258,29 @@ const Contact = () => {
                       <span>Mon-Sat: 10 AM - 8 PM | Sun: 11 AM - 6 PM</span>
                     </div>
 
-                    <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
-                      <div className="text-center text-muted-foreground">
-                        <MapPin className="h-8 w-8 mx-auto mb-2" />
-                        <p>Interactive Map</p>
-                        <p className="text-sm">
-                          Visit our showroom to try our mattresses
-                        </p>
-                      </div>
+                    {/* Embedded Google Map */}
+                    <div className="rounded-lg overflow-hidden shadow-soft">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.2569938114775!2d76.96707959999999!3d29.3920372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ddbeddb63b05d%3A0x4abb051fb74283bf!2sBATRA%20FOAM%20TRADERS!5e0!3m2!1sen!2sin!4v1761976046461!5m2!1sen!2sin"
+                        width="600"
+                        height="450"
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      ></iframe>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
 
-              <Card className="p-6">
-                <CardContent className="pt-6">
-                  <h4 className="font-semibold mb-4">Quick Actions</h4>
-                  <div className="space-y-3">
-                    <Button variant="outline" className="w-full justify-start">
-                      <Phone className="h-4 w-4 mr-2" />
-                      Call Now: +91 98765 43210
-                    </Button>
-                    <Button variant="outline" className="w-full justify-start">
-                      <MessageCircle className="h-4 w-4 mr-2" />
-                      WhatsApp Support
-                    </Button>
-                    <Button variant="outline" className="w-full justify-start">
-                      <Mail className="h-4 w-4 mr-2" />
-                      Email: info@sleepwell.in
+                    <Button
+                      variant="outline"
+                      className="w-full justify-center mt-2"
+                      asChild
+                    >
+                      <a
+                        href="https://maps.app.goo.gl/ZURseU7xdwDooFV96"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Open in Google Maps
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
@@ -335,8 +330,6 @@ const Contact = () => {
               </AccordionItem>
             ))}
           </Accordion>
-
-
         </div>
       </section>
 
