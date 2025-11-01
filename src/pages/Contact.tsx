@@ -231,19 +231,25 @@ const Contact = () => {
 
             {/* Map and Store Info */}
 
-            <div className="space-y-6">
-              <Card className="p-6">
+            <div className="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+              <Card className="p-4 sm:p-6">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <MapPin className="h-5 w-5 text-primary" />
-                    <span>Visit Our Showroom</span>
+                    <span className="text-lg sm:text-xl font-semibold">
+                      Visit Our Showroom
+                    </span>
                   </CardTitle>
                 </CardHeader>
+
                 <CardContent>
                   <div className="space-y-4">
+                    {/* Business Info */}
                     <div>
-                      <h4 className="font-semibold mb-2">Batra Foam Traders</h4>
-                      <p className="text-muted-foreground">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2">
+                        Batra Foam Traders
+                      </h4>
+                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                         Batra Foam Traders, Mandir Rd, Near Nanda Plywood, Geeta
                         Colony
                         <br />
@@ -253,25 +259,37 @@ const Contact = () => {
                       </p>
                     </div>
 
-                    <div className="flex items-center space-x-2 text-muted-foreground">
-                      <Clock className="h-4 w-4" />
-                      <span>Mon-Sat: 10 AM - 8 PM | Sun: 11 AM - 6 PM</span>
+                    {/* Business Hours */}
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-2 text-muted-foreground text-sm sm:text-base">
+                      <div className="flex items-center space-x-2">
+                        <Clock className="h-4 w-4" />
+                        <span>Mon–Sat: 10 AM – 8 PM</span>
+                      </div>
+                      <span className="hidden sm:inline">|</span>
+                      <span>Sun: 11 AM – 6 PM</span>
                     </div>
 
-                    {/* Embedded Google Map */}
+                    {/* Google Map Embed */}
                     <div className="rounded-lg overflow-hidden shadow-soft">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.2569938114775!2d76.96707959999999!3d29.3920372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ddbeddb63b05d%3A0x4abb051fb74283bf!2sBATRA%20FOAM%20TRADERS!5e0!3m2!1sen!2sin!4v1761976046461!5m2!1sen!2sin"
-                        width="600"
-                        height="450"
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                      ></iframe>
+                      <div
+                        className="relative w-full"
+                        style={{ paddingBottom: "56.25%" }}
+                      >
+                        <iframe
+                          className="absolute top-0 left-0 w-full h-full border-0"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.2569938114775!2d76.96707959999999!3d29.3920372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ddbeddb63b05d%3A0x4abb051fb74283bf!2sBATRA%20FOAM%20TRADERS!5e0!3m2!1sen!2sin!4v1761976046461!5m2!1sen!2sin"
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                          allowFullScreen
+                          title="Batra Foam Traders Location"
+                        ></iframe>
+                      </div>
                     </div>
 
+                    {/* Button */}
                     <Button
                       variant="outline"
-                      className="w-full justify-center mt-2"
+                      className="w-full justify-center mt-3 text-sm sm:text-base"
                       asChild
                     >
                       <a

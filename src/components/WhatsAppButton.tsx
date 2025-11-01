@@ -6,9 +6,7 @@ const WhatsAppButton = () => {
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (
-    <a
-      href={whatsappUrl}
-      target="_blank"
+    <button
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-in fade-in slide-in-from-bottom-4"
       aria-label="Chat on WhatsApp"
@@ -19,7 +17,7 @@ const WhatsAppButton = () => {
         href={whatsappUrl}
         target="_blank"
       />
-    </a>
+    </button>
   );
 };
 
