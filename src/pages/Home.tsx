@@ -13,6 +13,8 @@ import {
   MapPin,
   Play,
   Pause,
+  BriefcaseMedical,
+  Columns3Icon,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import heroImage from "@/assets/hero-bedroom.jpg";
@@ -51,23 +53,24 @@ const Home = () => {
   const features = [
     {
       icon: <Shield className="h-8 w-8 text-primary" />,
-      title: "10 Year Warranty",
-      description: "Comprehensive warranty covering manufacturing defects",
+      title: "7-10 Year Warranty",
+      description: "Complete peace of mind with lasting support",
     },
     {
-      icon: <Truck className="h-8 w-8 text-primary" />,
-      title: "Free Home Delivery",
-      description: "Fast delivery across India within 3-7 business days",
+      icon: <BriefcaseMedical className="h-8 w-8 text-primary" />,
+      title: "Doctor-Recommended ",
+      description: "rthopedic support trusted by experts",
     },
     {
-      icon: <RotateCcw className="h-8 w-8 text-primary" />,
-      title: "100 Night Trial",
-      description: "Try our mattress for 100 nights, return if not satisfied",
+      icon: <Columns3Icon className="h-8 w-8 text-primary" />,
+      title: "Custom Size Available ",
+      description: "Tailored comfort made just for you",
     },
     {
       icon: <Award className="h-8 w-8 text-primary" />,
       title: "Made in India",
-      description: "Proudly manufactured in India with premium materials",
+      description:
+        "Designed for Indian families, built with world-class standards",
     },
   ];
 

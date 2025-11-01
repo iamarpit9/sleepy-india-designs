@@ -21,12 +21,12 @@ const Footer = () => {
               India's trusted mattress brand committed to providing quality
               sleep solutions for every home across the nation.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <Facebook className="h-5 w-5 hover:text-accent-light cursor-pointer transition-colors" />
               <Instagram className="h-5 w-5 hover:text-accent-light cursor-pointer transition-colors" />
               <Twitter className="h-5 w-5 hover:text-accent-light cursor-pointer transition-colors" />
               <MessageCircle className="h-5 w-5 hover:text-accent-light cursor-pointer transition-colors" />
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -77,13 +77,18 @@ const Footer = () => {
             </h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-accent-light" />
-                <span>+91 89503 53673</span>
+                <a
+                  href="tel:+918950353673"
+                  className="flex justify-center items-center gap-2"
+                >
+                  <Phone className="h-4 w-4 text-accent-light" />
+                  +91 89503 53673
+                </a>
               </div>
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-accent-light" />
                 <span>info@sleepwell.in</span>
-              </div>
+              </div> */}
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-10 text-accent-light mt-1" />
                 <span>
