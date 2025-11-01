@@ -17,7 +17,7 @@ import {
   Columns3Icon,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import heroImage from "@/assets/hero-bedroom.jpg";
+import heroImage from "/hero-bedroom.jpg";
 // Video will be added when available - using placeholder for now
 import familySleep from "@/assets/family-sleep.jpg";
 import mattressShowcase from "@/assets/mattressShow.jpeg";

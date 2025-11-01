@@ -14,6 +14,12 @@ import { Star, Filter, Grid, List } from "lucide-react";
 import mattressProduct1 from "@/assets/mattress-product-1.jpg";
 import mattressProduct2 from "@/assets/mattress-product-2.jpg";
 import mattressProduct3 from "@/assets/mattress-product-3.jpg";
+import mattressProduct4 from "@/assets/mattressProduct4.png";
+import mattressProduct5 from "@/assets/mattressProduct5.png";
+import organicpillow from "@/assets/organicpillow.png";
+import contourpillow from "@/assets/contourpillow.png";
+import micropillow from "@/assets/micropillow.png";
+import memorypillow from "@/assets/memoryfpillow.png";
 import { Link } from "react-router-dom";
 
 const Products = () => {
@@ -148,7 +154,7 @@ const Products = () => {
       id: 7,
       name: "Latexpuf Silver Mattress",
       type: "Foam",
-      image: mattressProduct3,
+      image: mattressProduct4,
       rating: 4.4,
       reviews: 89,
       price: 15999,
@@ -168,7 +174,7 @@ const Products = () => {
       id: 8,
       name: "Latexpuf Gold Mattress",
       type: "Foam",
-      image: mattressProduct3,
+      image: mattressProduct5,
       rating: 4.4,
       reviews: 89,
       price: 15999,
@@ -210,7 +216,7 @@ const Products = () => {
       id: 10,
       name: "Bonnell Impress Mattress",
       type: "Foam",
-      image: mattressProduct3,
+      image: mattressProduct5,
       rating: 4.4,
       reviews: 89,
       price: 15999,
@@ -254,7 +260,7 @@ const Products = () => {
       id: 12,
       name: "Pocket Spring Mattress",
       type: "Foam",
-      image: mattressProduct3,
+      image: mattressProduct4,
       rating: 4.4,
       reviews: 89,
       price: 15999,
@@ -277,123 +283,94 @@ const Products = () => {
   const pillows = [
     {
       id: 1,
-      name: "Memory Foam Pillow",
-      type: "Memory Foam",
-      image: mattressProduct1,
+      name: "Organic Latex Pillow",
+      type: "",
+      image: organicpillow,
       rating: 4.7,
       reviews: 156,
-      price: 1999,
-      originalPrice: 2999,
-      sizes: ["Standard", "Queen", "King"],
-      features: [
-        "Contoured memory foam design",
-        "Neck and spine alignment",
-        "Breathable cooling cover",
-        "Hypoallergenic materials",
-      ],
-      comfort: "Medium",
-      thickness: "4-6 inches",
-      warranty: "3 Years",
-    },
-    {
-      id: 2,
-      name: "Orthopedic Cervical Pillow",
-      type: "Orthopedic",
-      image: mattressProduct2,
-      rating: 4.8,
-      reviews: 203,
-      price: 2499,
-      originalPrice: 3499,
-      sizes: ["Standard", "Large"],
-      features: [
-        "Ergonomic cervical support",
-        "Reduces neck pain",
-        "Premium quilted cover",
-        "Doctor recommended design",
-      ],
-      comfort: "Firm",
-      thickness: "4-5 inches",
-      warranty: "5 Years",
-    },
-    {
-      id: 3,
-      name: "Luxury Down Alternative Pillow",
-      type: "Fiber Fill",
-      image: mattressProduct3,
-      rating: 4.6,
-      reviews: 189,
-      price: 1499,
-      originalPrice: 2199,
-      sizes: ["Standard", "Queen", "King"],
-      features: [
-        "Soft microfiber fill",
-        "Hotel-quality comfort",
-        "Machine washable",
-        "Plush and fluffy feel",
-      ],
-      comfort: "Soft",
-      thickness: "5-7 inches",
-      warranty: "2 Years",
-    },
-    {
-      id: 4,
-      name: "Cooling Gel Pillow",
-      type: "Gel",
-      image: mattressProduct1,
-      rating: 4.7,
-      reviews: 167,
-      price: 2799,
-      originalPrice: 3799,
-      sizes: ["Standard", "Queen"],
-      features: [
-        "Cooling gel infusion",
-        "Temperature regulation",
-        "Memory foam base",
-        "Stays cool all night",
-      ],
-      comfort: "Medium",
-      thickness: "5-6 inches",
-      warranty: "3 Years",
-    },
-    {
-      id: 5,
-      name: "Bamboo Pillow",
-      type: "Natural",
-      image: mattressProduct2,
-      rating: 4.5,
-      reviews: 134,
-      price: 1799,
-      originalPrice: 2499,
-      sizes: ["Standard", "Queen"],
-      features: [
-        "Eco-friendly bamboo cover",
-        "Breathable and soft",
-        "Shredded memory foam fill",
-        "Adjustable loft",
-      ],
-      comfort: "Medium",
-      thickness: "5-6 inches",
-      warranty: "3 Years",
+      price: 0,
+      originalPrice: 0,
+      sizes: [],
+      features: [],
+      comfort: "",
+      thickness: "",
+      warranty: "",
     },
     {
       id: 6,
-      name: "Latex Foam Pillow",
-      type: "Latex",
-      image: mattressProduct3,
-      rating: 4.8,
-      reviews: 178,
-      price: 3299,
-      originalPrice: 4299,
-      sizes: ["Standard", "King"],
-      features: [
-        "Natural latex foam",
-        "Durable and supportive",
-        "Antimicrobial properties",
-        "Excellent breathability",
-      ],
-      comfort: "Firm",
-      thickness: "5-6 inches",
-      warranty: "5 Years",
+      name: "PU Foam Pillow",
+      type: "",
+      image: mattressProduct1,
+      rating: 4.7,
+      reviews: 156,
+      price: 0,
+      originalPrice: 0,
+      sizes: [],
+      features: [],
+      comfort: "",
+      thickness: "",
+      warranty: "",
+    },
+    {
+      id: 2,
+      name: "Contour Memory Pillow",
+      type: "",
+      image: contourpillow,
+      rating: 4.7,
+      reviews: 156,
+      price: 0,
+      originalPrice: 0,
+      sizes: [],
+      features: [],
+      comfort: "",
+      thickness: "",
+      warranty: "",
+    },
+
+    {
+      id: 3,
+      name: "Memory Foam Pillow",
+      type: "",
+      image: memorypillow,
+      rating: 4.7,
+      reviews: 156,
+      price: 0,
+      originalPrice: 0,
+      sizes: [],
+      features: [],
+      comfort: "",
+      thickness: "",
+      warranty: "",
+    },
+    {
+      id: 4,
+      name: "Micro Fibre Pillow",
+      type: "",
+      image: micropillow,
+      rating: 4.7,
+      reviews: 156,
+      price: 0,
+      originalPrice: 0,
+      sizes: [],
+      features: [],
+      comfort: "",
+      thickness: "",
+      warranty: "",
+    },
+    {
+      id: 5,
+      name: "Hollow Fibre Pillow",
+      type: "",
+      image: mattressProduct1,
+      rating: 4.7,
+      reviews: 156,
+      price: 0,
+      originalPrice: 0,
+      sizes: [],
+      features: [],
+      comfort: "",
+      thickness: "",
+      warranty: "",
     },
   ];
 
@@ -433,12 +410,14 @@ const Products = () => {
 
         <div className="space-y-3 mb-4">
           <div className="flex items-center justify-between text-sm text-muted-foreground">
-            <span>Comfort: {product.comfort}</span>
-            <span>Thickness: {product.thickness}</span>
+            {product.comfort && <span>Comfort: {product.comfort}</span>}
+            {product.thickness && <span>Thickness: {product.thickness}</span>}
           </div>
-          <span className="text-sm text-muted-foreground">
-            Warranty: {product.warranty}
-          </span>
+          {product.warranty && (
+            <span className="text-sm text-muted-foreground">
+              Warranty: {product.warranty}
+            </span>
+          )}
 
           <ul className="space-y-1">
             {product.features.map((feature, index) => (
@@ -504,8 +483,8 @@ const Products = () => {
               Our Products Collection
             </h1>
             <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
-              Discover the perfect mattress and pillow for your comfort needs. Premium
-              quality, affordable prices, made in India.
+              Discover the perfect mattress and pillow for your comfort needs.
+              Premium quality, affordable prices, made in India.
             </p>
           </div>
         </div>
@@ -593,7 +572,7 @@ const Products = () => {
               <TabsTrigger value="mattresses">Mattresses</TabsTrigger>
               <TabsTrigger value="pillows">Pillows</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="mattresses">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredMattresses.map((product) => (
@@ -601,7 +580,7 @@ const Products = () => {
                 ))}
               </div>
             </TabsContent>
-            
+
             <TabsContent value="pillows">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredPillows.map((product) => (
