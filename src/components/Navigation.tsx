@@ -23,12 +23,13 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-primary">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img
                 src={logo}
                 alt="Premium mattress collection"
-                className="max-h-28 w-auto object-contain rounded-lg shadow-card hover:shadow-hover transition-shadow duration-300 bg-transparent"
+                className="h-16 w-auto object-contain transition-transform duration-300"
               />
             </Link>
           </div>
@@ -58,9 +59,14 @@ const Navigation = () => {
               <Phone className="h-4 w-4" />
               <span>+91 89503 53673</span>
             </div>
-            <Button variant="accent" size="sm">
-              Get Quote
-            </Button>
+            <a
+              href="tel:+918950353673"
+              className="flex justify-center items-center gap-2"
+            >
+              <Button variant="accent" size="sm">
+                Get Quote
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
