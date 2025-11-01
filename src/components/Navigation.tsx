@@ -99,14 +99,15 @@ const Navigation = () => {
                       <Phone className="h-4 w-4" />
                       <span>+91 89503 53673</span>
                     </div>
-                    <div className="flex items-center space-x-2 px-4 py-2 text-muted-foreground">
-                      <Mail className="h-4 w-4" />
-                      <span>info@sleepwell.in</span>
-                    </div>
                     <div className="px-4 py-2">
-                      <Button variant="accent" className="w-full">
-                        Get Quote
-                      </Button>
+                      <a
+                        href="tel:+918950353673"
+                        className="flex justify-center items-center gap-2"
+                      >
+                        <Button variant="accent" size="sm">
+                          Get Quote
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </div>
