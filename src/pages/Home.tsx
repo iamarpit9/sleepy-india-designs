@@ -59,7 +59,7 @@ const Home = () => {
     {
       icon: <BriefcaseMedical className="h-8 w-8 text-primary" />,
       title: "Doctor-Recommended ",
-      description: "rthopedic support trusted by experts",
+      description: "Orthopedic support trusted by experts",
     },
     {
       icon: <Columns3Icon className="h-8 w-8 text-primary" />,
