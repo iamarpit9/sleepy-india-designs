@@ -20,7 +20,7 @@ import organicpillow from "@/assets/organicpillow.png";
 import contourpillow from "@/assets/contourpillow.png";
 import micropillow from "@/assets/micropillow.png";
 import memorypillow from "@/assets/memoryfpillow.png";
-import pufoampillow from "@/assets/pufoampillow.png";
+import pufoampillow from "@/assets/puFoamPillow.png";
 import holoowFibre from "@/assets/hollowFibre.png";
 import { Link } from "react-router-dom";
 
