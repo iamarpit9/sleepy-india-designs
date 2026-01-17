@@ -70,6 +70,12 @@ const Contact = () => {
       subtitle: "Quick responses",
     },
     {
+      icon: <Mail className="h-6 w-6 text-primary" />,
+      title: "Email Support",
+      details: "drbacksleep@gmail.com",
+      subtitle: "24/7 email support",
+    },
+    {
       icon: <MapPin className="h-6 w-6 text-primary" />,
       title: "Visit Our Store",
       details:

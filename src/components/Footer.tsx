@@ -96,6 +96,15 @@ const Footer = () => {
                   Colony, Panipat, Haryana 132103
                 </span>
               </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="h-4 w-4 text-accent-light" />
+                <a 
+                  href="mailto:drbacksleep@gmail.com"
+                  className="hover:text-accent-light transition-colors"
+                >
+                  drbacksleep@gmail.com
+                </a>
+              </div>
             </div>
           </div>
         </div>

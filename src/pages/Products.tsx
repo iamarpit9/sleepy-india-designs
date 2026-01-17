@@ -20,6 +20,8 @@ import organicpillow from "@/assets/organicpillow.png";
 import contourpillow from "@/assets/contourpillow.png";
 import micropillow from "@/assets/micropillow.png";
 import memorypillow from "@/assets/memoryfpillow.png";
+import pufoampillow from "@/assets/pufoampillow.png";
+import holoowFibre from "@/assets/hollowFibre.png";
 import { Link } from "react-router-dom";
 
 const Products = () => {
@@ -300,7 +302,7 @@ const Products = () => {
       id: 6,
       name: "PU Foam Pillow",
       type: "",
-      image: mattressProduct1,
+      image: pufoampillow,
       rating: 4.4,
       reviews: 156,
       price: 0,
@@ -361,7 +363,7 @@ const Products = () => {
       id: 5,
       name: "Hollow Fibre Pillow",
       type: "",
-      image: mattressProduct1,
+      image: holoowFibre,
       rating: 4.2,
       reviews: 15,
       price: 0,
