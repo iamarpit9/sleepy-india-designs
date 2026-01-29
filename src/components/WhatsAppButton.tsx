@@ -1,6 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 
+// Declare global gtag_report_conversion function
+declare global {
+  interface Window {
+    gtag_report_conversion?: (url?: string) => boolean;
+  }
+}
+
 const WhatsAppButton = () => {
   const navigate = useNavigate();
   const phoneNumber = "918950353673"; // Without + or spaces
@@ -8,6 +15,12 @@ const WhatsAppButton = () => {
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    
+    // Trigger Google Ads conversion tracking
+    if (typeof window.gtag_report_conversion === 'function') {
+      window.gtag_report_conversion();
+    }
+
     window.open(whatsappUrl, '_blank');
     navigate('/thank-you');
   };
