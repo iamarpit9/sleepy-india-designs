@@ -17,8 +17,12 @@ const WhatsAppButton = () => {
     e.preventDefault();
     
     // Trigger Google Ads conversion tracking
-    if (typeof window.gtag_report_conversion === 'function') {
-      window.gtag_report_conversion();
+    try {
+      if (typeof window.gtag_report_conversion === 'function') {
+        window.gtag_report_conversion();
+      }
+    } catch (error) {
+      console.error("Tracking error:", error);
     }
 
     window.open(whatsappUrl, '_blank');
